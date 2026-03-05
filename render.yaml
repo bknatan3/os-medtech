@@ -4,8 +4,9 @@ services:
     runtime: node
     plan: free
     rootDir: .
-    buildCommand: corepack enable && corepack prepare pnpm@10.8.0 --activate && pnpm install --frozen-lockfile && pnpm --filter @os-medtech/backend db:generate && pnpm --filter @os-medtech/backend build && pnpm --filter @os-medtech/backend db:deploy
-    startCommand: corepack enable && corepack prepare pnpm@10.8.0 --activate && pnpm --filter @os-medtech/backend start
+    buildCommand: corepack enable && corepack prepare pnpm@10.8.0 --activate && pnpm install --frozen-lockfile && pnpm --filter @os-medtech/backend db:generate && pnpm --filter @os-medtech/backend build
+    preDeployCommand: corepack enable && corepack prepare pnpm@10.8.0 --activate && pnpm --filter @os-medtech/backend db:deploy
+    startCommand: node apps/backend/dist/server.js
     healthCheckPath: /health
     autoDeploy: true
     envVars:
