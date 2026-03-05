@@ -1,0 +1,25 @@
+{
+  "name": "os-medtech-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.8.0",
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "dev:backend": "pnpm --filter @os-medtech/backend dev",
+    "dev:web": "pnpm --filter @os-medtech/web dev",
+    "dev:mobile": "pnpm --filter @os-medtech/mobile dev",
+    "dev:desktop": "pnpm --filter @os-medtech/desktop dev",
+    "build": "pnpm -r build",
+    "build:apk": "pnpm --filter @os-medtech/mobile build:apk",
+    "build:exe": "pnpm --filter @os-medtech/desktop build:exe",
+    "db:migrate": "pnpm --filter @os-medtech/backend db:migrate",
+    "db:seed": "pnpm --filter @os-medtech/backend db:seed",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test"
+  },
+  "devDependencies": {
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.3"
+  }
+}

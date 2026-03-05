@@ -1,0 +1,38 @@
+{
+  "name": "@os-medtech/desktop",
+  "version": "1.0.0",
+  "description": "OS MedTech - Sistema de Ordem de Servico",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "dev": "electron .",
+    "build": "echo \"desktop build placeholder\"",
+    "build:exe": "electron-builder --win --x64",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux",
+    "lint": "echo \"lint desktop\"",
+    "typecheck": "echo \"desktop typecheck pending\"",
+    "test": "echo \"desktop tests pending\""
+  },
+  "build": {
+    "appId": "com.osmedtech.desktop",
+    "productName": "OS MedTech",
+    "directories": { "output": "dist" },
+    "files": ["main.js", "preload.js", "web-build/**/*", "settings.json"],
+    "win": {
+      "target": [{ "target": "nsis", "arch": ["x64"] }],
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "OS MedTech"
+    }
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.13.3"
+  }
+}

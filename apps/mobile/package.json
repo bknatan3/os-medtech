@@ -1,0 +1,26 @@
+{
+  "name": "@os-medtech/mobile",
+  "version": "1.0.0",
+  "private": true,
+  "main": "expo-router/entry",
+  "scripts": {
+    "dev": "expo start",
+    "build": "echo \"mobile build placeholder\"",
+    "build:apk": "npx eas-cli build --platform android --profile preview-apk --non-interactive",
+    "lint": "echo \"lint mobile\"",
+    "typecheck": "tsc --noEmit",
+    "test": "echo \"mobile tests pending\""
+  },
+  "dependencies": {
+    "expo": "^52.0.20",
+    "expo-file-system": "^18.0.4",
+    "expo-router": "^4.0.17",
+    "expo-sqlite": "^15.0.6",
+    "react": "18.3.1",
+    "react-native": "0.76.5"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.2",
+    "typescript": "^5.7.3"
+  }
+}

@@ -1,0 +1,45 @@
+
+
+# Environment & Secrets (AIOS)
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+
+# Dependencies (AIOS)
+node_modules/
+node_modules
+
+# Build & Logs (AIOS)
+dist/
+build/
+*.log
+logs/
+apps/web/.next/
+apps/web/out/
+apps/desktop/web-build/
+apps/desktop/dist/
+apps/web/tsconfig.tsbuildinfo
+
+# IDE & OS (AIOS)
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+
+# AIOS Local (AIOS)
+.aios-core/local/
+.claude/settings.local.json
+.aios/install-log.txt
+
+# Agent/Workspace local folders
+.aios-core/
+.antigravity/
+.claude/
+.codex/
+.cursor/
+.gemini/
+
+# Local release artifacts
+release/

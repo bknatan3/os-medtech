@@ -1,0 +1,19 @@
+{
+  "name": "@os-medtech/shared",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "echo \"shared build\"",
+    "lint": "echo \"shared lint\"",
+    "typecheck": "tsc --noEmit",
+    "test": "echo \"shared tests pending\""
+  },
+  "dependencies": {
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}

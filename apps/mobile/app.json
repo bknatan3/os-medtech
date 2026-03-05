@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "OS MedTech",
+    "slug": "os-medtech",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "android": {
+      "package": "com.osmedtech.app",
+      "versionCode": 1,
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "ACCESS_NETWORK_STATE",
+        "INTERNET"
+      ]
+    },
+    "plugins": [
+      "expo-camera",
+      "expo-file-system",
+      "expo-sqlite"
+    ]
+  }
+}
