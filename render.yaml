@@ -5,8 +5,7 @@ services:
     plan: free
     rootDir: apps/backend
     buildCommand: corepack enable && corepack prepare pnpm@10.8.0 --activate && pnpm install && pnpm db:generate && pnpm build
-    preDeployCommand: corepack enable && corepack prepare pnpm@10.8.0 --activate && pnpm db:deploy
-    startCommand: pnpm start
+    startCommand: corepack enable && corepack prepare pnpm@10.8.0 --activate && pnpm db:deploy && pnpm db:seed:if-empty && pnpm start
     healthCheckPath: /health
     autoDeploy: true
     envVars:
