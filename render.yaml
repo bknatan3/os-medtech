@@ -3,10 +3,10 @@ services:
     name: os-medtech-api
     runtime: node
     plan: free
-    rootDir: .
-    buildCommand: corepack enable && corepack prepare pnpm@10.8.0 --activate && pnpm install --frozen-lockfile && pnpm --filter @os-medtech/backend db:generate && pnpm --filter @os-medtech/backend build
-    preDeployCommand: corepack enable && corepack prepare pnpm@10.8.0 --activate && pnpm --filter @os-medtech/backend db:deploy
-    startCommand: node apps/backend/dist/server.js
+    rootDir: apps/backend
+    buildCommand: corepack enable && corepack prepare pnpm@10.8.0 --activate && pnpm install && pnpm db:generate && pnpm build
+    preDeployCommand: corepack enable && corepack prepare pnpm@10.8.0 --activate && pnpm db:deploy
+    startCommand: pnpm start
     healthCheckPath: /health
     autoDeploy: true
     envVars:
